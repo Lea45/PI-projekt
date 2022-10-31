@@ -1,35 +1,25 @@
 <template>
-    <div id="nav">
+
+<!---------------------------------------------- NAVBAR LINKS ------------------------------------------------->
+    <nav class="navbar navbar-light bg-light justify-content-between">
       <router-link to="/">Početna</router-link> |
-      <router-link to="/">#</router-link> |
-      <router-link to="/"> #</router-link> |
-      <router-link to="/">#</router-link> |
-      <router-link to="/">#</router-link> |
-      <router-link to="/login">Prijava</router-link>
-    </div>
+      <router-link to="">O nama</router-link> |
+      <router-link to="">Lokacija</router-link> |
+      <router-link to="">Galerija</router-link> |
+      <router-link to="">Događaji</router-link> |
+      <router-link to="/login">Prijava</router-link> 
+
+<!---------------------------------------------- NAVBAR SEARCH ------------------------------------------------->
+      <form class="form-inline">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </nav>
+
+
     <div id="content-wrap">
       <router-view />
     </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
 
-#nav {
-  padding: 40px;
-  a {
-    font-weight: bold;
-    color: black;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
-}
-
-</style>
