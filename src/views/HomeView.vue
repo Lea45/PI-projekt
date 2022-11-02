@@ -1,6 +1,7 @@
 <template>
-
+<div id="parent">
 <!------------------------------ ANIMATED MUG ----------------------------------------->
+<div id="first">
   <div class="main">
     <div class="cup">
       <div class="smoke-holder">
@@ -12,9 +13,10 @@
 
     <div class="saucer"></div>
   </div>
-
+</div>
 
 <!------------------------------ WORKING TIME ----------------------------------------->
+<div id="second">
 <div class="wt">
   <section id="working-time" class="working-time">
         <div class="container">
@@ -93,8 +95,9 @@
                 </div>
               </div>
 
-              <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="time-panel">
+              <div class="last">
+              <div id="pomakni" class="col-6 col-sm-6 col-md-4 col-lg-2">
+                <div id="rasiri" class="time-panel">
                   <h3>NEDJELJA</h3>
                   <ul class="list-unstyled mb-0">
                     <li>07:00h</li>
@@ -103,21 +106,30 @@
                   </ul>
                 </div>
               </div>
+              </div>
 
             </div>
         </div>
   </section>
 </div>
-
-
-
+</div>
+</div> 
 </template>
 
 
 
 <style scoped>
+#parent {
+  display: flex;
+}
 
+#first {
+  flex: 1;
+}
 
+#second {
+  width: 1000px;
+}
 
 /*--------------------------------- ANIMATED MUG ---------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i");
@@ -136,7 +148,7 @@
 
 .main {
   margin: auto;
-  padding: 80px 0 0;
+  padding: 170px 250px 0;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
@@ -292,7 +304,9 @@
   position: relative;
   padding: 26px 0;
   border:  solid black;
+  background-color: lightgray;
 }
+
 .time-panel:hover {
   -webkit-transform: translateY(-4px);
   -moz-transform: translateY(-4px);
@@ -300,6 +314,7 @@
   -o-transform: translateY(-4px);
   transform: translateY(-4px);
 }
+
 .time-panel h3 {
   font-size: 24px;
   font-weight: 700;
@@ -308,11 +323,28 @@
   color: black;
   text-transform: capitalize;
 }
+
 .time-panel ul li {
   font-size: 14px;
   line-height: 24px;
   font-weight: 400;
   color: black;
+}
+
+.last {
+  left: 160px;
+  width: 800px;
+}
+
+#pomakni {
+  width: auto;
+  height: auto;
+  margin: auto;
+  position: relative;
+}
+
+#rasiri {
+  width: 500px;
 }
 
 .heading {
@@ -324,10 +356,11 @@
     padding: 70px 0;
     position: relative;
     min-height: 100vh;
-     width: 1000px;
-     flex-wrap: wrap;
-  justify-content: flex-start;
+    width: 1000px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
+
 .working-time::before {
     content: "";
     background: #00000094;
@@ -337,8 +370,10 @@
     left: 0;
     top: 0;
 }
+
 .working-time h2, .working-time p{
-    color: #fff;
+    color: black;
+    font-weight: bolder;
 }
 
 </style>
