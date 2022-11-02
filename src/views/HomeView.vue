@@ -13,22 +13,26 @@
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i");
 *, *:before, *:after {
+  word-break: break-all;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i");
+*, *:before, *:after {
   margin: 0;
   padding: 0;
   word-break: break-all;
   box-sizing: border-box;
 }
 
-/*----------------------------cijela šalica (pomicanje)---------------------------- */
 .main {
   margin: auto;
-  padding: 170px 0 0;
+  padding: 80px 0 0;
 }
 
-/*----------------------------glavni dio šalice---------------------------- */
 .cup {
-  width: 390px;
-  height: 500px;
+  width: 120px;
+  height: 170px;
   border-radius: 50%;
   border-bottom: 7px solid black;
   margin: 0 auto -20px;
@@ -38,36 +42,33 @@
   content: "";
   position: absolute;
 }
-
-/*----------------------------gornji dio šalice(krug)---------------------------- */
 .cup::before {
-  width: 390px;
-  height: 70px;
+  width: 120px;
+  height: 30px;
   border-right: 7px solid black;
   border-top: 3px solid black;
   border-bottom: 3px solid black;
-  border-radius: 75%;
+  border-radius: 50%;
   border-left: none;
   top: 70px;
 }
 .cup::after {
-  width: 120px;
-  height: 70px;
-  border-right: 10px solid black;
+  width: 20px;
+  height: 40px;
+  border-right: 5px solid black;
   border-radius: 0 80px 80px 0;
   right: -20px;
-  top: 250px;
+  top: 98px;
 }
 
-/*----------------------------dim---------------------------- */
 .smoke-holder span {
   animation: smokie 2.2s linear infinite;
   position: absolute;
   border: 2px solid rgba(128, 128, 128, 0.6);
   width: 2px;
-  height: 50px;
+  height: 10px;
   top: 110px;
-  left: 180px;
+  left: 60px;
   z-index: -1;
   filter: blur(2px);
 }
@@ -105,12 +106,10 @@
     transform: scale(6);
   }
 }
-
-/*----------------------------unutar šalice---------------------------- */
 .coffee {
   position: absolute;
-  width: 380px;
-  height: 280px;
+  width: 110px;
+  height: 50px;
   left: 50%;
   background: rgba(111, 78, 55, 0.7);
   border-radius: 0 0 216px 216px;
@@ -124,19 +123,18 @@
   border-radius: 50%;
   content: "";
   top: -5px;
-  width: 380px;
-  height: 25px;
+  width: 102%;
+  height: 12px;
   left: 50%;
   outline: 1px solid transparent;
   transform: translate(-50%, 0) rotate(0);
   position: absolute;
 }
 
-/*----------------------------tanjurić---------------------------- */
 .saucer {
   margin: auto;
-  width: 600px;
-  height: 70px;
+  width: 150px;
+  height: 40px;
   border-radius: 50%;
   border: 7px solid black;
   border-top: none;
