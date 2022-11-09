@@ -9,7 +9,7 @@
       <router-link to="/">Početna</router-link> |
       <router-link to="">O nama</router-link> |
       <router-link to="">Lokacija</router-link> |
-      <router-link to="">Galerija</router-link> |
+      <router-link to="/gallery">Galerija</router-link> |
       <router-link to="">Događaji</router-link> |
       <router-link to="/login">Prijava</router-link> 
 
