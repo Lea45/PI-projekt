@@ -1,4 +1,7 @@
 <template>
+<!--link za social media ikone--->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <div id="parent">
 <!------------------------------ ANIMATED MUG ----------------------------------------->
 <div id="first">
@@ -13,6 +16,18 @@
 
     <div class="saucer"></div>
   </div>
+
+
+<!------------------------------ SOCIAL MEDIA ----------------------------------------->
+  <div class="media">
+    <a href="https://instagram.com/cb_palmero?igshid=YmMyMTA2M2Y=" class="link" target="_blank">
+      <i class="fa fa-instagram instagram"></i>
+    </a>
+    <a href="https://www.facebook.com/profile.php?id=100083517216096" class="link" target="_blank">
+      <i class="fa fa-facebook"></i>
+    </a>
+  </div>
+
 </div>
 
 <!------------------------------ WORKING TIME ----------------------------------------->
@@ -293,6 +308,65 @@
   }
 }
 
+
+/*--------------------------------- ANIMATED MUG ---------------------------------- */
+.media {
+  display: flex;
+  padding-top: 150px;
+  padding-left: 260px;
+}
+
+.link {
+  text-decoration: none;
+  color: #b7b7b7;
+  margin: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(28, 28, 28);
+  border-radius: 10px;
+  position: relative;
+  transition: 0.4s;
+}
+
+.link:hover {
+  transform: rotate(45deg);
+}
+
+.link::before {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  background: #373737;
+  border-radius: 10px;
+  transition: 0.2s;
+}
+
+.link:hover::before {
+  opacity: 0.4;
+}
+
+.link:nth-child(1)::before {
+  background: #c32aa3;
+}
+
+.link:nth-child(2)::before {
+  background: #1da1f2;
+}
+
+.link:hover::before {
+  transform: translate(-4px, -4px);
+  filter: blur(10px);
+}
+
+.link i {
+  font-size: 1.7em;
+  transition: all 0.4s;
+}
 
 /*--------------------------------- WORKING TIME  ---------------------------------- */
 .time-panel {
