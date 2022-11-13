@@ -1,4 +1,5 @@
 <template>
+
 <!--link za social media ikone--->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -28,107 +29,15 @@
     </a>
   </div>
 
-</div>
+  </div>
 
-<!------------------------------ WORKING TIME ----------------------------------------->
-<div id="second">
-<div class="wt">
-  <section id="working-time" class="working-time">
-        <div class="container">
-            <div class="row">
+  <!------------------------------ WORKING TIME ----------------------------------------->
+  <div id="second">
 
-                <div class="col-md-12 text-center heading">
-                    <h2 class="wow fadeInUp animated">RADNO VRIJEME</h2>
-                </div>
-            </div>
 
-            <div class="row">
 
-              <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="time-panel">
-                  <h3>PONEDJELJAK</h3>
-                  <ul class="list-unstyled mb-0">
-                    <li>07:00h</li>
-                    <li>-</li>
-                    <li>23:00h</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="time-panel">
-                  <h3>UTORAK</h3>
-                  <ul class="list-unstyled mb-0">
-                    <li>07:00h</li>
-                    <li>-</li>
-                    <li>23:00h</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="time-panel">
-                  <h3>SRIJEDA</h3>
-                  <ul class="list-unstyled mb-0">
-                    <li>07:00h</li>
-                    <li>-</li>
-                    <li>23:00h</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="time-panel">
-                  <h3>ČETVRTAK</h3>
-                  <ul class="list-unstyled mb-0">
-                    <li>07:00h</li>
-                    <li>-</li>
-                    <li>23:00h</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="time-panel">
-                  <h3>PETAK</h3>
-                  <ul class="list-unstyled mb-0">
-                    <li>07:00h</li>
-                    <li>-</li>
-                    <li>23:00h</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div class="time-panel">
-                  <h3>SUBOTA</h3>
-                  <ul class="list-unstyled mb-0">
-                    <li>07:00h</li>
-                    <li>-</li>
-                    <li>23:00h</li>
-                  </ul>
-                </div>
-              </div>
-
-              <div class="last">
-              <div id="pomakni" class="col-6 col-sm-6 col-md-4 col-lg-2">
-                <div id="rasiri" class="time-panel">
-                  <h3>NEDJELJA</h3>
-                  <ul class="list-unstyled mb-0">
-                    <li>07:00h</li>
-                    <li>-</li>
-                    <li>23:00h</li>
-                  </ul>
-                </div>
-              </div>
-              </div>
-
-            </div>
-        </div>
-  </section>
 </div>
 </div>
-</div> 
 </template>
 
 
@@ -369,85 +278,4 @@
 }
 
 /*--------------------------------- WORKING TIME  ---------------------------------- */
-.time-panel {
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  -ms-transition: all 0.35s;
-  -o-transition: all 0.35s;
-  transition: all 0.35s;
-  position: relative;
-  padding: 26px 0;
-  border:  solid black;
-  background-color: lightgray;
-}
-
-.time-panel:hover {
-  -webkit-transform: translateY(-4px);
-  -moz-transform: translateY(-4px);
-  -ms-transform: translateY(-4px);
-  -o-transform: translateY(-4px);
-  transform: translateY(-4px);
-}
-
-.time-panel h3 {
-  font-size: 24px;
-  font-weight: 700;
-  line-height: 1;
-  margin-bottom: 35px;
-  color: black;
-  text-transform: capitalize;
-}
-
-.time-panel ul li {
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 400;
-  color: black;
-}
-
-.last {
-  left: 160px;
-  width: 800px;
-}
-
-#pomakni {
-  width: auto;
-  height: auto;
-  margin: auto;
-  position: relative;
-}
-
-#rasiri {
-  width: 500px;
-}
-
-.heading {
-    margin-bottom: 50px;
-}
-
-.working-time {
-    text-align: center;
-    padding: 70px 0;
-    position: relative;
-    min-height: 100vh;
-    width: 1000px;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-
-.working-time::before {
-    content: "";
-    background: #00000094;
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-}
-
-.working-time h2, .working-time p{
-    color: black;
-    font-weight: bolder;
-}
-
 </style>

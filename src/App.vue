@@ -7,8 +7,8 @@
 <!---------------------------------------------- NAVBAR LINKS ------------------------------------------------->
     <nav class="navbar navbar-light bg-light justify-content-between">
       <router-link to="/">Početna</router-link> |
-      <router-link to="">O nama</router-link> |
-      <router-link to="">Lokacija</router-link> |
+      <router-link to="/about">O nama</router-link> |
+      <router-link to="">Cjenik</router-link> |
       <router-link to="/gallery">Galerija</router-link> |
       <router-link to="">Događaji</router-link> |
       <router-link to="/login">Prijava</router-link> 
