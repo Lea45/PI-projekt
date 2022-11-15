@@ -1,74 +1,66 @@
 <template>
+<div id="parent1">
   <!------------------------------ LOCATION MAP ----------------------------------------->
-    <div id="all">
+    <div id="first1">
+      <div id="all">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2785.6621182906197!2d18.18921371447827!3d45.71781482450753!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x475d3f729b5dcda3%3A0x96716a7ad2d8f919!2sVenoseva%20ul.%2046A%2C%2031543%2C%20Rakitovica!5e0!3m2!1shr!2shr!4v1668299967136!5m2!1shr!2shr" 
          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
     </div>
-
 <!------------------------------ CHAT BOX ----------------------------------------->
-    <main class="direct-message">
-        <div class="nav">
-            <a href="">
-                <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
-                <span class="screen-reader-text">Vrati se u razgovor</span>
-            </a>
-            <h2>Poruke sa ...</h2>
-            <a href="">
-                <i class="fa fa-user" aria-hidden="true"></i>
-                <span class="screen-reader-text">User Info</span>
-            </a>
-        </div>
+    <div id="second1">
 
+      <main class="direct-message">
+        <div class="nav">
+          <h2>Chatting with ...</h2>
+        </div>
         <h1>
-            <span class="screen-reader-text">Chatting with</span>
-            <img src="images/chat/coffee.png" class="favicon">
-            <span>Caffe bar Palmero</span>
+          <img src="images/chat/coffee.png" class="favicon">
+          <span>Caffe bar Palmero</span>
         </h1>
 
         <div class="messages">
-
-        <div class="message to">
+          <div class="message to">
             <img src="images/chat/user.png" class="favicon">
             <span class="time">10 minutes ago</span>
             <p>Pozdrav!</p>
-        </div>
+          </div>
 
-        <div class="message to">
+          <div class="message to">
             <img src="images/chat/user.png" class="favicon">
             <span class="time">10 minutes ago</span>
             <p>Imam pitanje.</p>
-        </div>
+          </div>
 
-        <div class="message from">
+          <div class="message from">
             <img src="images/chat/coffee.png" class="favicon">
             <span class="time">7 minutes ago</span>
             <p>Pozdrav! Može i dva :) </p>
-        </div>
+          </div>
 
-        <div class="message to">
+          <div class="message to">
             <img src="images/chat/user.png" class="favicon">
             <span class="time">6 minutes ago</span>
             <p>Mogu li rezervirati dva stola za proslavu rođendana?</p>
-        </div>
+          </div>
 
-
-        <div class="message from">
+          <div class="message from">
             <img src="images/chat/coffee.png" class="favicon">
             <span class="time">2 minutes ago</span>
             <p>Naravno!</p>
-        </div>
+          </div>
 
-        <div class="message from">
+          <div class="message from">
             <img src="images/chat/coffee.png" class="favicon">
             <span class="time">1 minute ago</span>
             <p>Samo mi reci datum i koja dva stola želiš.</p>
-        </div>
+          </div>
 
-        <div class="message to">
+          <div class="message to">
             <img src="images/chat/user.png" class="favicon">
-            <span class="time">6 minutes ago</span>
+            <span class="time">1 minutes ago</span>
             <p>23.11</p>
-        </div>
+          </div>
 
         </div>
   
@@ -80,25 +72,38 @@
             </button>
         </div>
 
-    </main>
+      </main>
+    </div>
+</div>
 </template>
 
 
 <style>
+#parent1 {
+  display: flex;
+}
+
+#first1 {
+  width: 900px;
+}
+
+#second1 {
+  flex: 1;
+}
 /*--------------------------------- LOCATION MAP ---------------------------------- */
 #all {
     width: 100%;
-    float: left;
     text-align: center;
 }
 
 iframe {
-    width: 700px;
-    height: 350px;
-    margin: 50px auto;
+    width: 550px;
+    height: 450px;
+    margin: 200px auto;
 }
 
-/* */
+
+/* -------------------------------------------- CHAT BOX ---------------------------------------------- */
 .direct-message {
   padding: 1rem;
   margin: 3rem auto;
@@ -131,10 +136,11 @@ iframe {
 
 .direct-message .nav h2 {
   font-size: 0.5rem;
-  font-weight: 400;
+  font-weight: bold;
   text-transform: lowercase;
   text-align: center;
   width: 100%;
+  color: #fefefe;
 }
 
 .direct-message h1 {
@@ -142,9 +148,10 @@ iframe {
   margin: 0 -1rem 1rem;
   padding: 1rem;
   font-size: 1.4rem;
-  font-weight: 100;
+  font-weight: bold;
   display: flex;
   align-items: center;
+  color: #fefefe;
 }
 
 .direct-message h1 .favicon {
@@ -176,7 +183,7 @@ iframe {
 .direct-message .message .time {
   padding: 0 1rem;
   line-height: 50px;
-  color: rgba(254, 254, 254, 0.25);
+  color: rgba(254, 254, 254, 0.982);
   font-size: 0.6rem;
   order: 2;
 }
@@ -262,11 +269,6 @@ iframe {
   box-sizing: border-box;
 }
 
-.screen-reader-text, .helper-input {
-  display: none;
-}
-
-
 main h1:first-child, main h2:first-child, main h3:first-child, main h4:first-child, main h5:first-child, main h6:first-child {
   margin-top: 0;
 }
@@ -311,6 +313,7 @@ input:focus {
   color: #fefefe;
   box-shadow: 1px 1px 3px 0 rgba(51, 51, 51, 0.15);
   text-transform: uppercase;
+  width: 35%;
 }
 
 .material-button:hover, .material-delete:hover {
