@@ -1,3 +1,4 @@
+import Gallery from "vuejs-image-gallery"
 <template>
 
 <!--link za social media ikone--->
@@ -31,18 +32,49 @@
 
   </div>
 
-  <!------------------------------ WORKING TIME ----------------------------------------->
+  <!------------------------------ IMAGES ----------------------------------------->
   <div id="second">
 
+    <div class="container">
 
+	    <div class="gallery">
 
-</div>
+		    <div class="gallery-item">
+			    <img class="gallery-image" src="images/home/cocacola.avif">
+		    </div>
+
+		    <div class="gallery-item">
+			    <img class="gallery-image" src="images/home/coffee.avif">
+		    </div>
+
+		    <div class="gallery-item">
+			    <img class="gallery-image" src="images/home/heineken.avif">
+		    </div>
+
+		    <div class="gallery-item">
+			    <img class="gallery-image" src="images/home/tea.avif">
+		    </div>
+
+		    <div class="gallery-item">
+			    <img class="gallery-image" src="images/home/wine.avif">
+		    </div>
+
+		    <div class="gallery-item">
+			    <img class="gallery-image" src="images/home/alchokol.avif">
+		    </div>
+
+	    </div>
+
+    </div>
+
+  </div>
+
 </div>
 </template>
 
 
 
-<style scoped>
+<style>
 #parent {
   display: flex;
 }
@@ -53,6 +85,7 @@
 
 #second {
   width: 1000px;
+  font-size: 20px;
 }
 
 /*--------------------------------- ANIMATED MUG ---------------------------------- */
@@ -277,5 +310,60 @@
   transition: all 0.4s;
 }
 
-/*--------------------------------- WORKING TIME  ---------------------------------- */
+/*--------------------------------- IMAGES -------------------------------------- */
+:root  {
+	font-size: 10px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+.container {
+	max-width: 90rem;
+	margin: 50px auto;
+	padding: 0 2rem 2rem;
+}
+
+
+.gallery {
+	display: flex;
+	flex-wrap: wrap;
+	margin: -1rem -1rem;
+}
+
+.gallery-item {
+	flex: 1 0 24rem;
+	margin: 1rem;
+	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
+	overflow: hidden;
+}
+
+.gallery-image {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transition: transform 400ms ease-out;
+}
+
+.gallery-image:hover {
+	transform: scale(1.15);
+}
+
+@supports (display: grid) {
+	.gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+
+	.gallery,
+	.gallery-item {
+		margin: 0;
+	}
+}
+
 </style>
