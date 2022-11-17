@@ -1,4 +1,3 @@
-import Gallery from "vuejs-image-gallery"
 <template>
 
 <!--link za social media ikone--->
@@ -375,14 +374,6 @@ import Gallery from "vuejs-image-gallery"
   transition-delay: 0.5s;
 }
 /*--------------------------------- IMAGES -------------------------------------- */
-
-
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
-}
-
 .container {
 	max-width: 100rem;
 	margin: 30px auto;

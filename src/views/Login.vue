@@ -1,5 +1,5 @@
 <template>
-<section class="vh-100" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/004/684/788/small/black-and-white-coffee-shop-background-eps-free-vector.jpg');">
+<section class="vh-90" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/004/684/788/small/black-and-white-coffee-shop-background-eps-free-vector.jpg');">
   <div class="container py-5 h-100">
     <div class="row d-flex justify-content-center align-items-center h-100">
       <div class="col col-xl-10">
