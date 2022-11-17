@@ -6,29 +6,36 @@ import Gallery from "vuejs-image-gallery"
 
 <div id="parent">
 <!------------------------------ ANIMATED MUG ----------------------------------------->
-<div id="first">
-  <div class="main">
-    <div class="cup">
-      <div class="smoke-holder">
-        <span></span><span></span><span></span><span></span><span></span><span></span>
+  <div id="first">
+    <div class="main">
+      <div class="cup">
+        <div class="smoke-holder">
+          <span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
+
+        <div class="coffee"></div>
       </div>
 
-      <div class="coffee"></div>
+      <div class="saucer"></div>
     </div>
-
-    <div class="saucer"></div>
-  </div>
 
 
 <!------------------------------ SOCIAL MEDIA ----------------------------------------->
-  <div class="media">
-    <a href="https://instagram.com/cb_palmero?igshid=YmMyMTA2M2Y=" class="link" target="_blank">
-      <i class="fa fa-instagram instagram"></i>
-    </a>
-    <a href="https://www.facebook.com/profile.php?id=100083517216096" class="link" target="_blank">
-      <i class="fa fa-facebook"></i>
-    </a>
-  </div>
+    <div class="media">
+      <a href="https://instagram.com/cb_palmero?igshid=YmMyMTA2M2Y=" class="link" target="_blank">
+        <i class="fa fa-instagram instagram"></i>
+      </a>
+      <a href="https://www.facebook.com/profile.php?id=100083517216096" class="link" target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </div>
+
+
+<!------------------------------ WORKING TIME ----------------------------------------->
+    <div class="wtime">
+      <p class="wt">Radno vrijeme: <br> Svaki dan 07h-23h</p>
+    </div>
+
 
   </div>
 
@@ -251,7 +258,7 @@ import Gallery from "vuejs-image-gallery"
 }
 
 
-/*--------------------------------- ANIMATED MUG ---------------------------------- */
+/*--------------------------------- SOCIAL MEDIA ---------------------------------- */
 .media {
   display: flex;
   padding-top: 150px;
@@ -310,6 +317,63 @@ import Gallery from "vuejs-image-gallery"
   transition: all 0.4s;
 }
 
+/*--------------------------------- WORKING TIME ---------------------------------- */
+.wtime{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+}
+
+.wt {
+  position: relative;
+  padding: 10px 30px;
+  margin: 45px 0;
+  color: #21ebff;
+  text-decoration: none;
+  font-size: 40px;
+  transition: 0.5s;
+}
+
+.wt::before {
+  content: " ";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #21ebff;
+  border-left: 2px solid #21ebff;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.wt::after {
+  content: " ";
+  position: absolute;
+  bottom: -1px;
+  right: -1px;
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid #21ebff;
+  border-right: 2px solid #21ebff;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+}
+
+.wt:hover::before, 
+.wt:hover::after {
+  width: 100%;
+  height: 100%;
+  transition-delay: 0s;
+}
+
+.wt:hover {
+  background: #21ebff;
+  color: #000;
+  box-shadow: 0 0 50px #21ebff;
+  transition-delay: 0.5s;
+}
 /*--------------------------------- IMAGES -------------------------------------- */
 :root  {
 	font-size: 10px;
