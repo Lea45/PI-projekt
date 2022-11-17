@@ -375,9 +375,7 @@ import Gallery from "vuejs-image-gallery"
   transition-delay: 0.5s;
 }
 /*--------------------------------- IMAGES -------------------------------------- */
-:root  {
-	font-size: 10px;
-}
+
 
 *,
 *::before,
@@ -386,11 +384,10 @@ import Gallery from "vuejs-image-gallery"
 }
 
 .container {
-	max-width: 90rem;
-	margin: 50px auto;
+	max-width: 100rem;
+	margin: 30px auto;
 	padding: 0 2rem 2rem;
 }
-
 
 .gallery {
 	display: flex;
@@ -399,7 +396,7 @@ import Gallery from "vuejs-image-gallery"
 }
 
 .gallery-item {
-	flex: 1 0 24rem;
+	flex: 1 0;
 	margin: 1rem;
 	box-shadow: 0.3rem 0.4rem 0.4rem rgba(0, 0, 0, 0.4);
 	overflow: hidden;
@@ -420,7 +417,7 @@ import Gallery from "vuejs-image-gallery"
 @supports (display: grid) {
 	.gallery {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
 		grid-gap: 2rem;
 	}
 
