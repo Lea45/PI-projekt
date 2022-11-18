@@ -22,7 +22,7 @@
       <a href="https://instagram.com/cb_palmero?igshid=YmMyMTA2M2Y=" class="link" target="_blank">
         <i class="fa fa-instagram instagram"></i>
       </a>
-      <a href="https://www.facebook.com/profile.php?id=100083517216096" class="link" target="_blank">
+      <a href="https://www.facebook.com/profile.php?id=100087867435765" class="link" target="_blank">
         <i class="fa fa-facebook"></i>
       </a>
     </div>
@@ -30,51 +30,51 @@
 
 <!------------------------------ WORKING TIME ----------------------------------------->
     <div class='cards'>
-  <div class='card'>
-    <div class='card-face'>
-      <div class='card-label'>PON</div>
-      <p class="hours"> 07h-23h </p>
+      <div class='card'>
+        <div class='card-face'>
+          <div class='card-label'>PON</div>
+            <p class="hours"> 07h-23h </p>
+        </div>
+        </div>
+        <div class='card'>
+          <div class='card-face'>
+            <div class='card-label'>UTO</div>
+            <p class="hours"> 07h-23h </p>
+          </div>
+        </div>
+        <div class='card'>
+          <div class='card-face'>
+            <div class='card-label'>SRI</div>
+            <p class="hours"> 07h-23h </p>
+          </div>
+        </div>
+        <div class='card'>
+          <div class='card-face'>
+            <div class='card-label'>ČET</div>
+            <p class="hours"> 07h-23h </p>
+          </div>
+        </div>
+        <div class='card'>
+          <div class='card-face'>
+            <div class='card-label'>PET</div>
+            <p class="hours"> 07h-23h </p>
+          </div>
+        </div>
+        <div class='card'>
+          <div class='card-face'>
+            <div class='card-label'>SUB</div>
+            <p class="hours"> 07h-23h </p>
+          </div>
+        </div>
+        <div class='card'>
+          <div class='card-face'>
+            <div class='card-label'>NED</div>
+            <p class="hours"> 07h-23h </p>
+          </div>
+        </div>
+      </div>
+      <p class="wtitle"> RADNO VRIJEME </p>
     </div>
-  </div>
-  <div class='card'>
-    <div class='card-face'>
-      <div class='card-label'>UTO</div>
-      <p class="hours"> 07h-23h </p>
-    </div>
-  </div>
-  <div class='card'>
-    <div class='card-face'>
-      <div class='card-label'>SRI</div>
-      <p class="hours"> 07h-23h </p>
-    </div>
-  </div>
-  <div class='card'>
-    <div class='card-face'>
-      <div class='card-label'>ČET</div>
-      <p class="hours"> 07h-23h </p>
-    </div>
-  </div>
-  <div class='card'>
-    <div class='card-face'>
-      <div class='card-label'>PET</div>
-      <p class="hours"> 07h-23h </p>
-    </div>
-  </div>
-  <div class='card'>
-    <div class='card-face'>
-      <div class='card-label'>SUB</div>
-      <p class="hours"> 07h-23h </p>
-    </div>
-  </div>
-  <div class='card'>
-    <div class='card-face'>
-      <div class='card-label'>NED</div>
-      <p class="hours"> 07h-23h </p>
-    </div>
-  </div>
-</div>
-
-  </div>
 
   <!------------------------------ IMAGES ----------------------------------------->
   <div id="second">
@@ -165,10 +165,12 @@
   -20px; /* pomicanje tanjurića gore dolje */
   position: relative; /* original position */
 }
+
 .cup::before, .cup::after {
   content: "";
   position: absolute; 
 }
+
 .cup::before {
   width: 120px;
   height: 30px;
@@ -179,6 +181,7 @@
   border-left: none;
   top: 70px;
 }
+
 .cup::after {
   width: 20px;
   height: 40px;
@@ -200,18 +203,23 @@
   z-index: -1;
   filter: blur(2px);
 }
+
 .smoke-holder span:nth-of-type(2) {
   animation-delay: 0.3s;
 }
+
 .smoke-holder span:nth-of-type(3) {
   animation-delay: 0.6s;
 }
+
 .smoke-holder span:nth-of-type(4) {
   animation-delay: 0.9s;
 }
+
 .smoke-holder span:nth-of-type(5) {
   animation-delay: 1.2s;
 }
+
 .smoke-holder span:nth-of-type(6) {
   animation-delay: 1.5s;
 }
@@ -247,6 +255,7 @@
   bottom: 1px;
   z-index: -1;
 }
+
 .coffee::before {
   animation: shakeCoffee 1.2s alternate linear infinite;
   background: #6f4e37;
@@ -273,6 +282,7 @@
   position: absolute;
   z-index: -2;
 }
+
 .saucer::before {
   content: "";
   position: absolute;
@@ -285,7 +295,6 @@
   border-radius: 50%;
   height: 42%;
 }
-
 
 /* shake animacija - unutar šalice*/
 @keyframes shakeCoffee {
@@ -354,9 +363,8 @@
   transition: all 0.4s;
 }
 
+
 /*--------------------------------- WORKING TIME ---------------------------------- */
-
-
 .cards {
   bottom: 0;
   display: flex;
@@ -420,20 +428,24 @@
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(255, 153, 153, 0.75);
   transform: translateY(45px) rotate(-28.125deg);
 }
+
 .card:nth-child(1) .card-face .card-label {
   color: #db0000;
   text-shadow: -0.025em 0.025em 0 #ff8080;
 }
+
 .card:nth-child(1):hover .card-face {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 2px rgba(255, 153, 153, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
 }
+
 .card:nth-child(1):hover .card-face:after {
   -webkit-animation: fade 250ms ease-out forwards;
           animation: fade 250ms ease-out forwards;
 }
+
 .card:nth-child(1):hover:after {
   top: -175px;
 }
@@ -443,20 +455,24 @@
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(255, 153, 214, 0.75);
   transform: translateY(35px) rotate(-21.875deg);
 }
+
 .card:nth-child(2) .card-face .card-label {
   color: #db0084;
   text-shadow: -0.025em 0.025em 0 #ff80cc;
 }
+
 .card:nth-child(2):hover .card-face {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 2px rgba(255, 153, 214, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
 }
+
 .card:nth-child(2):hover .card-face:after {
   -webkit-animation: fade 250ms ease-out forwards;
           animation: fade 250ms ease-out forwards;
 }
+
 .card:nth-child(2):hover:after {
   top: -175px;
 }
@@ -466,20 +482,24 @@
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(235, 153, 255, 0.75);
   transform: translateY(25px) rotate(-15.625deg);
 }
+
 .card:nth-child(3) .card-face .card-label {
   color: #af00db;
   text-shadow: -0.025em 0.025em 0 #e680ff;
 }
+
 .card:nth-child(3):hover .card-face {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 2px rgba(235, 153, 255, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
 }
+
 .card:nth-child(3):hover .card-face:after {
   -webkit-animation: fade 250ms ease-out forwards;
           animation: fade 250ms ease-out forwards;
 }
+
 .card:nth-child(3):hover:after {
   top: -175px;
 }
@@ -489,20 +509,24 @@
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(173, 153, 255, 0.75);
   transform: translateY(15px) rotate(-9.375deg);
 }
+
 .card:nth-child(4) .card-face .card-label {
   color: #2c00db;
   text-shadow: -0.025em 0.025em 0 #9980ff;
 }
+
 .card:nth-child(4):hover .card-face {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 2px rgba(173, 153, 255, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
 }
+
 .card:nth-child(4):hover .card-face:after {
   -webkit-animation: fade 250ms ease-out forwards;
           animation: fade 250ms ease-out forwards;
 }
+
 .card:nth-child(4):hover:after {
   top: -175px;
 }
@@ -512,20 +536,24 @@
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(153, 194, 255, 0.75);
   transform: translateY(5px) rotate(-3.125deg);
 }
+
 .card:nth-child(5) .card-face .card-label {
   color: #0058db;
   text-shadow: -0.025em 0.025em 0 #80b3ff;
 }
+
 .card:nth-child(5):hover .card-face {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 2px rgba(153, 194, 255, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
 }
+
 .card:nth-child(5):hover .card-face:after {
   -webkit-animation: fade 250ms ease-out forwards;
           animation: fade 250ms ease-out forwards;
 }
+
 .card:nth-child(5):hover:after {
   top: -175px;
 }
@@ -535,20 +563,24 @@
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(153, 255, 255, 0.75);
   transform: translateY(5px) rotate(3.125deg);
 }
+
 .card:nth-child(6) .card-face .card-label {
   color: #00dbdb;
   text-shadow: -0.025em 0.025em 0 #80ffff;
 }
+
 .card:nth-child(6):hover .card-face {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 2px rgba(153, 255, 255, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
 }
+
 .card:nth-child(6):hover .card-face:after {
   -webkit-animation: fade 250ms ease-out forwards;
           animation: fade 250ms ease-out forwards;
 }
+
 .card:nth-child(6):hover:after {
   top: -175px;
 }
@@ -558,25 +590,27 @@
   box-shadow: -5px 5px 5px rgba(0, 0, 0, 0.15), inset 0 0 0 2px rgba(153, 255, 194, 0.75);
   transform: translateY(15px) rotate(9.375deg);
 }
+
 .card:nth-child(7) .card-face .card-label {
   color: #00db58;
   text-shadow: -0.025em 0.025em 0 #80ffb3;
 }
+
 .card:nth-child(7):hover .card-face {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4), inset 0 0 0 2px rgba(153, 255, 194, 0.75);
   transform: translateY(-100px) rotate(0deg) scale(2);
   transition-duration: 0ms;
   z-index: 5;
 }
+
 .card:nth-child(7):hover .card-face:after {
   -webkit-animation: fade 250ms ease-out forwards;
           animation: fade 250ms ease-out forwards;
 }
+
 .card:nth-child(7):hover:after {
   top: -175px;
 }
-
-
 
 @-webkit-keyframes fade {
   0% {
@@ -599,6 +633,14 @@
     transform: scale(1.15);
   }
 }
+
+.wtitle {
+  margin-top: 50px;
+  margin-left: 280px;
+  font-weight: bolder;
+}
+
+
 /*--------------------------------- IMAGES -------------------------------------- */
 .container {
 	max-width: 100rem;
