@@ -1,7 +1,6 @@
 <template>
     
 <input class="variation" id="solid" type="radio" value="1" name="border" checked="checked"/>
-
 <input class="variation" id="shadow" type="radio" value="2" name="border"/>
 
 <div class="folder">
@@ -22,37 +21,92 @@
       <div><span>Bezalkoholna pića</span></div>
     </button>
   </div>
+
   <div class="content">
     <div class="content__inner" id="tab-1">
       <div class="page">
-        <p> </p>
-        
+        <p><span>Osječko, 0.5l</span><span>1,59€</span> </p>
+        <p><span>Osječko, 0.33l</span><span>1,59€</span> </p>
+        <p><span>Ožujsko, 0.5l</span><span>1,59€</span> </p>
+        <p><span>Ožujsko, 0.33l</span><span>1,59€</span> </p>
+        <p><span>Karlovačko, 0.5l</span><span>1,59€</span> </p>
+        <p><span>Karlovačko, 0.33l</span><span>1,59€</span> </p>
+        <p><span>Jelen, 0.5l</span><span>1,59€</span> </p>
+        <p><span>Jelen, 0.33l</span><span>1,59€</span> </p>
+        <p><span>Stella, 0.33l</span><span>1,99€</span> </p>
+        <p><span>Heineken, 0.25l</span><span>1,99€</span> </p>
+        <p><span>Bezalkoholni heineken, 0.33l</span><span>1,99€</span> </p>
+        <p><span>Radler - Osječko/Ožujsko/Karlovačko, 0.33l</span><span>1,59€</span> </p>
       </div>
     </div>
+
     <div class="content__inner" id="tab-2">
       <div class="page">
-        <p> </p>
-        
+        <p><span>Vino Graševina Kutjevo, 1l</span><span>10,62€</span> </p>
+        <p><span>Vino Belje,1l</span><span>10,62€</span> </p>
+        <p><span>Crno vino, 1l</span><span>10,62€</span> </p>
+        <p><span>Pol pol, 0.2l</span><span>1,19€</span> </p>
+        <p><span>Bijelo s kolom, 0.2l</span><span>1,46€</span> </p>
+        <p><span>Bambus, 0.2l</span><span>1,46€</span> </p>
+        <p><span>Deci vina, 0.1l</span><span>1,06€</span> </p>
+        <p><span>Somersby, 0.33l</span><span>1.99€</span> </p>
       </div>
     </div>
+
     <div class="content__inner" id="tab-3">
       <div class="page">
-        <p> </p>
-    
+        <p><span>Amaro, 0.05l</span><span>1,06€</span> </p>
+        <p><span>Pelin, 0.05l</span><span>1,33€</span> </p>
+        <p><span>Konjak, 0.05l</span><span>1,33€</span> </p>
+        <p><span>Stock, 0.05l</span><span>1,59€</span> </p>
+        <p><span>Gin, 0.05l</span><span>1,33€</span> </p>
+        <p><span>Vodka, 0.05l</span><span>1,33€</span> </p>
+        <p><span>Travarica, 0.05l</span><span>1,06€</span> </p>
+        <p><span>Šljivovica, 0.05l</span><span>1,33€</span> </p>
+        <p><span>Medica, 0.05l</span><span>1,33€</span> </p>
+        <p><span>Blacky, 0.05l</span><span>1,19€</span> </p>
+        <p><span>Jack Daniels, 0.05l</span><span>2,65€</span> </p>
+        <p><span>Lavov, 0.05l</span><span>1,33€</span> </p>
       </div>
     </div>
+
     <div class="content__inner" id="tab-4">
       <div class="page">
-        <p></p>
-       
+        <p><span>Kava</span><span>0,93€</span> </p>
+        <p><span>Topla čokolada</span><span>1,46€</span> </p>
+        <p><span>Cappuccino</span><span>1,06€</span> </p>
+        <p><span>Čaj</span><span>0,93€</span> </p>
+        <p><span>Bijela kava</span><span>1,19€</span> </p>
+        <p><span>Kuhano vino, 0.1l</span><span>1,06€</span> </p>
+        <p><span>Ledena kava</span><span>1,33€</span> </p>
+        <p><span>3u1</span><span>1,06€</span> </p>
+        <p><span>Nesquik</span><span>1,46€</span> </p>
       </div>
     </div>
-        <div class="content__inner" id="tab-5">
+
+    <div class="content__inner" id="tab-5">
       <div class="page">
-        <p></p>
-        
+        <p><span>Pepsi, 0.25l</span><span>1,59€</span> </p>
+        <p><span>7 up, 0.25l</span><span>1,59€</span> </p>
+        <p><span>Inka bitter lemon, 0.25l</span><span>1,59€</span> </p>
+        <p><span>Inka bitter water, 0.25l</span><span>1,59€</span> </p>
+        <p><span>Studena ledeni čaj breskva, 0.25l</span><span>1,59€</span> </p>
+        <p><span>Studena ledeni čaj brusnica, 0.25l</span><span>1,59€</span> </p>
+        <p><span>Romerquelle limunska trava, 0.25l</span><span>1,59€</span> </p>
+        <p><span>Jana vitamin, 0.5l</span><span>1,99€</span> </p>
+        <p><span>Hell, 0.25l</span><span>1,59€</span> </p>
+        <p><span>Fanta, 0.25l</span><span>1,59€</span> </p>
+        <p><span>Coca Cola, 0.25l</span><span>1,59€</span> </p>
+        <p><span>Prirodan sok, 0.2l</span><span>1,73€</span> </p>
+        <p><span>Hidra, 0.5l</span><span>1,99€</span> </p>
+        <p><span>Juicy vita, 0.33l</span><span>1,06€</span> </p>
+        <p><span>Coca cola, 1l</span><span>3,98€</span> </p>
+        <p><span>Točena coca cola, 0.1l</span><span>0,40€</span> </p>
+        <p><span>Radenska kraljevi vrelac classic, 1l</span><span>1,33€</span> </p>
+        <p><span>Radenska kraljevi vrelac classic, 0.1l</span><span>0,13€</span> </p>
       </div>
     </div>
+
   </div>
 </div>
 </template>
@@ -61,6 +115,24 @@
 
 p {
   margin-bottom: 1rem;
+ 
+}
+p span:first-child{
+  float: left;
+  padding: 0 10px 0 0;
+}
+
+p span:first-child + span {
+  float: right;
+  padding: 0 0 0 10px;
+}
+
+p:after{
+  content: '';
+  display: block;
+  overflow: hidden;
+  border-bottom: 2px dotted #555; /* Renders poorly. I'd prefer a background image instead. */
+  height: 14px;
 }
 
 .tab {
@@ -69,15 +141,12 @@ p {
   line-height: 0.9;
   display: inline-block;
   margin-left: -35px;
-  filter: drop-shadow(0px -3px 2px rgba(0, 0, 0, 0.05));
   border: none;
   border-radius: 6px 6px 0 0;
   position: relative;
   margin-right: 4rem;
-  background: var(--background);
   white-space: nowrap;
   cursor: pointer;
-  background: var(--background);
 }
 .tab:focus {
   outline: none;
@@ -185,8 +254,6 @@ p {
   min-height: 20rem;
   line-height: 160%;
   background-color: #f9f9f9;
-  filter: drop-shadow(0px 1px 3px rgba(0, 0, 0, 0.15));
-  background-image: linear-gradient(#e4e4e4 1px, transparent 1px);
   background-size: 8% 8%, 2px 2px;
 }
 
