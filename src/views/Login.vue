@@ -23,10 +23,6 @@
 
 
 <style>
-* {
-  box-sizing: border-box;
-}
-
 :root {
   --primary-color: #808da8;
 }
