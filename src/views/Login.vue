@@ -38,7 +38,7 @@
   padding: 2rem;
   margin: 4.5rem auto;
   color: #fff;
-  position: relative;
+  position: relative
 }
 
 .login .login-pic-container {
