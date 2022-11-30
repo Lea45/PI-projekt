@@ -185,18 +185,19 @@
 
   <!-------------------------------- ABOUT US ----------------------------------------->
   <div class="ttxt">
-    <svg width="313" height="67">
-      <text x="0" y="60" fill="#2f3238" stroke="#2f3238" stroke-width="1" class="logostart">O NAMA</text>
-    </svg>
-    <p class="txt"> Dizajn ovog kafica pruza opustenu atmosferu za sve prilike. Zelis popiti jutarnju 
-      kavu prije poslu? U miru? Bez "kvocanja" ukucana? Nasi vrsni konobari tu su da 
-      da te oraspoloze s raznim nacinima pripreme kave. </p>
-      <p class="txt"> Na poslu su te iznervirali? Znas kako se kaze? Pivce da ti smiri zivce! </p>
-      <p class="txt"> A ako trebas nesto jace, tu su i raznolika alkoholna pica po niskim cijenama.</p>
-      <p class="txt"> Za one koji si ipak zele samo doci schillati s prijateljima, tu su i razni topli
-        napitci u kojima cete zasigurno uzivati </p>
-        <p class="txt"> Pronaci nas mozes na adresi Venoseva 46a u Rakitovici, svakim danom od 07h do 23h</p>
-        <p class="txt"> Veselimo se tvom dolasku! </p>
+    <div class="blackboard">
+      <p> Dizajn ovog kafića pruža opuštenu atmosferu za sve prilike. Želis popiti jutarnju 
+        kavu prije posla? U miru? Bez "kvocanja" ukućana? Naši vrsni konobari tu su da 
+        da te oraspolože s raznim načinima pripreme kave. 
+        Na poslu su te iznervirali? Znaš kako se kaže? Pivce da ti smiri živce! 
+        A  ako trebaš nešto jače, tu su i raznolika alkoholna pića po niskim cijenama.
+        Za one koji si ipak žele samo doći schillati s prijateljima, tu su i razni topli
+        napitci u kojima ćete zasigurno uživati.
+        Pronaći nas možes na adresi Venoseva 46a u Rakitovici, svakim danom od 07h do 23h
+        Veselimo se tvom dolasku! 
+      </p>
+    </div>
+  
   </div>
 </template>
 
@@ -619,35 +620,84 @@ input:focus {
 
 
 /* -------------------------------------------- ABOUT US ---------------------------------------------- */
-@keyframes draw {
-  20% {
-    fill-opacity: 0;
-  }
-  40% {
-    fill-opacity: 1;
-  }
-  100% {
-    stroke-dashoffset: 0;
-    fill-opacity: 1;
-  }
+@import url('https://fonts.googleapis.com/css?family=Kalam');
+
+.blackboard {
+	position: relative;
+  margin: auto;
+  width: 60vw;
+  min-width: 40em;
+	padding: 50px;
+  box-sizing: border-box;
+	background-image: 
+		radial-gradient( circle at left 30%, 
+			rgba(34, 34, 34, 0.2), 
+			rgba(34, 34, 34, 0.2) 80px, 
+			rgba(34, 34, 34, 0.3) 100px, 
+			rgba(51, 51, 51, 0.3) 160px, 
+			rgba(51, 51, 51, 0.3)), 
+		linear-gradient( 215deg, transparent, transparent 100px, 
+			rgba(34,34,34,0.4) 260px, rgba(34,34,34,0.4) 320px, transparent), 
+		radial-gradient( circle at right, rgba(17,17,17,0.4), rgba(51, 51, 51, 0.5)),
+		linear-gradient(0deg, rgba(80,80,80,.5) , rgba(80,80,80,.2) 70% );
+	background-color: rgba(51, 51, 51, 0.8);
+  border: tan solid 12px;
+	border-top: #bda27e solid 12px;
+	border-left: #b19876 solid 12px;
+	border-bottom: #c9ad86 solid 12px;
+	box-shadow: 0px 0px 6px 5px rgba(58, 18, 13, 0), 
+		0px 0px 0px 2px #c2a782, 0px 0px 0px 4px #a58e6f, 
+		3px 4px 8px 5px rgba(0, 0, 0, 0.5);
 }
 
-.logostart {
-  font-weight: 700;
-  text-transform: uppercase;
-  font-size: 60px;
-  line-height: 60px;
-  font-family: "Montserrat", sans-serif;
+.blackboard .text0, .blackboard .text1, .blackboard .text2 {
+  box-sizing: border-box;
 }
 
-text.logostart {
-  -webkit-animation: draw 9s forwards;
-  animation: draw 9s forwards;
+.blackboard * {
+  font-family: Kalam, cursive;
+  font-weight: normal;
+  font-size: 32pt;
+  color: white;
+  letter-spacing: 2px;
+  word-break: keep-all;
+  text-align: justify;
 }
 
-text {
-  stroke-dasharray: 1000;
-  stroke-dashoffset: 1000;
-  fill-opacity: 0;
+.blackboard .text0 {
+	position: relative;
+	color: transparent;
+	margin: 0;
 }
+
+.blackboard .text1, .blackboard .text2 {
+	position: absolute;
+}
+
+.blackboard .text1 {
+  top: 21px;
+  left: 24px;
+  margin-right: 16px;
+  color: rgba(120,120,120,0.8);
+  text-shadow: -1px 0 0px white; 
+}
+
+.blackboard .text2 {
+  top: 21px;
+  left: 21px;
+  margin-right: 19px;
+  color: rgba(80,80,80,0.5);
+  text-shadow: 1px 0 0 rgba(255,255,255,0.7) ;
+}
+
+.blackboard ul li {
+	list-style-type: none;
+	padding-left: 3rem;
+}
+
+.blackboard ul li::before {
+	content: '->  ';
+	margin-left: -2.3rem;
+} 
 </style>
+
