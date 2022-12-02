@@ -186,15 +186,15 @@
   <!-------------------------------- ABOUT US ----------------------------------------->
   <div class="ttxt">
     <div class="blackboard">
-      <p> Dizajn ovog kafića pruža opuštenu atmosferu za sve prilike. Želis popiti jutarnju 
-        kavu prije posla? U miru? Bez "kvocanja" ukućana? Naši vrsni konobari tu su da 
+      <p> Dizajn ovog kafića pruža opuštenu atmosferu za sve prilike. 
+        <br> Želis popiti jutarnju kavu prije posla? U miru? Bez "kvocanja" ukućana? Naši vrsni konobari tu su da 
         da te oraspolože s raznim načinima pripreme kave. 
-        Na poslu su te iznervirali? Znaš kako se kaže? Pivce da ti smiri živce! 
-        A  ako trebaš nešto jače, tu su i raznolika alkoholna pića po niskim cijenama.
-        Za one koji si ipak žele samo doći schillati s prijateljima, tu su i razni topli
+        <br> Na poslu su te iznervirali? Znaš kako se kaže? Pivce da ti smiri živce! 
+        <br> A  ako trebaš nešto jače, tu su i raznolika alkoholna pića po niskim cijenama.
+        <br> Za one koji si ipak žele samo doći schillati s prijateljima, tu su i razni topli
         napitci u kojima ćete zasigurno uživati.
-        Pronaći nas možes na adresi Venoseva 46a u Rakitovici, svakim danom od 07h do 23h
-        Veselimo se tvom dolasku! 
+        <br> Pronaći nas možeš na adresi Venoseva 46a u Rakitovici, svakim danom od 07h do 23h
+        <br> Veselimo se tvom dolasku! 
       </p>
     </div>
   
@@ -620,6 +620,10 @@ input:focus {
 
 
 /* -------------------------------------------- ABOUT US ---------------------------------------------- */
+.ttxt {
+  padding: 50px;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Kalam');
 
 .blackboard {
@@ -657,7 +661,7 @@ input:focus {
 .blackboard * {
   font-family: Kalam, cursive;
   font-weight: normal;
-  font-size: 32pt;
+  font-size: 30px;
   color: white;
   letter-spacing: 2px;
   word-break: keep-all;
