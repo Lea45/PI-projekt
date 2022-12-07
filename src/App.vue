@@ -10,7 +10,7 @@
       <router-link to="/about">O nama</router-link> |
       <router-link to="/pricelist">Cjenik</router-link> |
       <router-link to="/gallery">Galerija</router-link> |
-      <router-link to="">Događaji</router-link> |
+      <router-link to="/events">Događaji</router-link> |
       <router-link to="/login">Prijava</router-link> 
 
 <!---------------------------------------------- NAVBAR SEARCH ------------------------------------------------->

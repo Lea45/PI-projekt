@@ -30,6 +30,12 @@ const routes = [
     path: '/Pricelist',
     name: 'pricelist',
     component: () => import( '../views/Pricelist.vue')
+  },
+
+  {
+    path: '/Events',
+    name: 'events',
+    component: () => import( '../views/Events.vue')
   }
 ]
 

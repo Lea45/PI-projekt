@@ -20,3 +20,8 @@ if (window.innerWidth > 800) {
 		scrollContainer.scrollLeft += evt.deltaY;
 	});
 }
+
+
+$('.container').on('click', function () {
+	$('.card').toggleClass('flipped');
+  });
