@@ -1,11 +1,8 @@
 <template>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
-  
-<!-- The Timeline -->
 
 <ul class="timeline">
 
-	<!-- Item 1 -->
 	<li>
 		<div class="direction-r">
 			<div class="flag-wrapper">
@@ -16,7 +13,6 @@
 		</div>
 	</li>
   
-	<!-- Item 2 -->
 	<li>
 		<div class="direction-l">
 			<div class="flag-wrapper">
@@ -27,7 +23,6 @@
 		</div>
 	</li>
 
-	<!-- Item 3 -->
 	<li>
 		<div class="direction-r">
 			<div class="flag-wrapper">
@@ -119,7 +114,6 @@
 			<div class="desc">*harmonika i klavijature*</div>
 		</div>
 	</li>
-</ul>
 
     <li>
 		<div class="direction-l">
@@ -131,20 +125,12 @@
             <div class="desc">*karlovačko 0,33 11kn*</div>
 		</div>
 	</li>
-
+    
+</ul>
 </template>
 
 <style>
-body {	
-  margin: 0;
-  padding: 0;
-  background: rgb(230,230,230);
-  
-  color: rgb(50,50,50);
-  font-family: 'Open Sans', sans-serif;
-  font-size: 112.5%;
-  line-height: 1.6em;
-}
+
 
 /* ================ The Timeline ================ */
 

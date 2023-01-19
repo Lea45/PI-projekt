@@ -5,20 +5,30 @@
     <span class="title-text"> Venoseva 46a, Rakitovica </span>
   </div>
 <!---------------------------------------------- NAVBAR LINKS ------------------------------------------------->
-    <nav class="navbar navbar-light bg-light justify-content-between">
-      <router-link to="/">Početna</router-link> |
-      <router-link to="/about">O nama</router-link> |
-      <router-link to="/pricelist">Cjenik</router-link> |
-      <router-link to="/gallery">Galerija</router-link> |
-      <router-link to="/events">Događaji</router-link> |
-      <router-link to="/login">Prijava</router-link> 
+   <header>
+  <nav>
+    <ul>
+      <li><router-link to="/">Početna</router-link></li>
+      <li><router-link to="/about">O nama</router-link></li>
+      <li><router-link to="/pricelist">Cjenik</router-link></li>
+      <li><router-link to="/gallery">Galerija</router-link></li>
+      <li><router-link to="/events">Događaji</router-link></li>
+      <li><router-link to="/login">Prijava</router-link></li>
+      <li class="closeButton">
+        <i class="fas fa-times"></i>
+      </li>
+    </ul>
+  </nav>
 
-<!---------------------------------------------- NAVBAR SEARCH ------------------------------------------------->
+</header>
+   
+
+<!---------------------------------------------- NAVBAR SEARCH -------------------------------------------
       <form class="form-inline">
         <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       </form>
-    </nav>
+    ------>
 
 
     <div id="content-wrap">
@@ -55,5 +65,8 @@
   font-weight: bolder;
   font-size: 20px;
 }
+
+
+
 
 </style>

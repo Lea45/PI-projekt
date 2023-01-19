@@ -22,6 +22,3 @@ if (window.innerWidth > 800) {
 }
 
 
-$('.container').on('click', function () {
-	$('.card').toggleClass('flipped');
-  });

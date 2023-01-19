@@ -363,7 +363,7 @@ iframe {
   padding: 1rem;
   margin: 3rem auto;
   width: 350px;
-  background: #fefefe;
+  background-color: #fefefe;
   border-radius: 3px;
   box-shadow: 1px 2px 3px 5px rgba(0, 0, 0, 0.05);
   border-radius: 5px;

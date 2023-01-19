@@ -375,11 +375,12 @@
 }
 
 .card {
-  height: 150px;
+  height: 140px;
   margin: 0 -25px;
   position: relative;
   width: 100px;
   border: none;
+  background-color: transparent;
 }
 
 .card:after {
