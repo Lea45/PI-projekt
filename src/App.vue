@@ -5,22 +5,17 @@
     <span class="title-text"> Venoseva 46a, Rakitovica </span>
   </div>
 <!---------------------------------------------- NAVBAR LINKS ------------------------------------------------->
-   <header>
-  <nav>
-    <ul>
-      <li><router-link to="/">Početna</router-link></li>
-      <li><router-link to="/about">O nama</router-link></li>
-      <li><router-link to="/pricelist">Cjenik</router-link></li>
-      <li><router-link to="/gallery">Galerija</router-link></li>
-      <li><router-link to="/events">Događaji</router-link></li>
-      <li><router-link to="/login">Prijava</router-link></li>
-      <li class="closeButton">
-        <i class="fas fa-times"></i>
-      </li>
-    </ul>
-  </nav>
-
-</header>
+  <header class="menu">
+    
+  <ul>
+    <li><a href="/">Početna</a></li>
+    <li><a href="/about">O nama</a></li>
+    <li><a href="/pricelist">Cjenik</a></li>
+    <li><a href="/gallery">Galerija</a></li>
+    <li><a href="/events">Događaji</a></li>
+    <li><a href="/login">Prijava</a></li>
+  </ul>
+  </header>
    
 
 <!---------------------------------------------- NAVBAR SEARCH -------------------------------------------
@@ -39,14 +34,16 @@
 </template>
 
 <style>
+/* ------------------------------- TITLE ----------------------------------- */
 .title {
   margin: auto;
-  width: 25%;
+  width: 100%;
   text-align: center;
-  padding: 10px;
-  font-size: 35px;
+  padding: 20px;
+  font-size: 50px;
   font-weight: bolder;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Ink';
+  color: red;
 }
 
 .title .title-text {
@@ -68,5 +65,66 @@
 
 
 
+/* ------------------------------- MENU ----------------------------------- */
+.menu {
+	padding: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: times;
+	background-color: white;
+  height: fit-content;
+}
+
+ul {
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul li {
+	list-style: none;
+}
+
+ul li a {
+	text-decoration: none;
+	color: black;
+	font-size: 30px;
+  font-weight: bolder;
+	display: block;
+	padding: 10px 15px;
+	position: relative;
+}
+
+ul li a:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #3d3d3d;
+	transform: scaleX(0);
+	transition: all 0.5s;
+	transform-origin: left
+}
+
+ ul li a:hover:before, ul li a:hover:after {
+ 	transform: scaleX(1);
+ }
+
+ ul li a:after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 2px;
+	background-color: #3d3d3d;
+	transform: scaleX(0);
+	transition: all 0.5s;
+	transform-origin: right
+}
 
 </style>
