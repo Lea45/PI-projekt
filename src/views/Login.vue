@@ -1,133 +1,169 @@
 <template>
-    <div class="login">
-
-            <div class="login-pic-container">
-                <img src="https://res.cloudinary.com/drymsmld5/image/upload/v1590935129/Codepen/login%20form/person_srb6xd.jpg" alt="person avtar">
-            </div>
-
-            <div class="login-form">
-                <div class="login-credentials">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="Unesi email">
-                    <label for="password">Lozinka</label>
-                    <input type="password" name="password" id="password" placeholder="Unesi lozinku">
-                    <button type="submit">Prijava</button>
-                    <p><a href="#">Zaboravljena lozinka?</a></p>
-                </div>
-                <hr>
-            </div>
-    </div>
-
+<!--link za  ikone--->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-2"></div>
+            <div class="col-lg-6 col-md-8 login-box">
+                <div class="col-lg-12 login-key">
+                    <i class="fa fa-key" aria-hidden="true"></i>
+                </div>
+                <div class="col-lg-12 login-title">
+                    CAFFE BAR PALMERO
+                </div>
 
+                <div class="col-lg-12 login-form">
+                    <div class="col-lg-12 login-form">
+                        <form>
+                            <div class="form-group">
+                                <label class="form-control-label">Korisničko ime</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label">Lozinka</label>
+                                <input type="password" class="form-control" i>
+                            </div>
+
+                            <div class="col-lg-12 loginbttm">
+                                <div class="col-lg-6 login-btm login-text">
+                                    <!-- Error Message -->
+                                </div>
+                                <div class="col-lg-6 login-btm login-button">
+                                    <button type="submit" class="btn btn-outline-primary">PRIJAVA</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-2"></div>
+            </div>
+        </div>
+    </div>
 </template>
 
 
 
 <style>
-:root {
-  --primary-color: #808da8;
+.login-box {
+    margin-top: 75px;
+    height: auto;
+    background: #1A2226;
+    text-align: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
-.login {
-  background-color: var(--primary-color);
-  width: 320px;
-  height: 450px;
-  padding: 2rem;
-  margin: 4.5rem auto;
-  color: #fff;
-  position: relative
+.login-key {
+    height: 100px;
+    font-size: 80px;
+    line-height: 100px;
+    background: -webkit-linear-gradient(#27EF9F, #0DB8DE);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
-.login .login-pic-container {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  position: relative;
-  top: calc(-50px - 2rem);
-  left: calc(50% - 50px);
+.login-title {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 2px;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #ECF0F5;
 }
 
-.login .login-pic-container img {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
+.login-form {
+    margin-top: 25px;
+    text-align: left;
 }
 
-.login .login-form {
-  position: relative;
-  top: -60px;
+input[type=text] {
+    background-color: #1A2226;
+    border: none;
+    border-bottom: 2px solid #0DB8DE;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    margin-bottom: 20px;
+    padding-left: 0px;
+    color: #ECF0F5;
 }
 
-.login-form .login-credentials label {
-  display: block;
-  margin: 0px auto;
-  font-size: 1.2rem;
+input[type=password] {
+    background-color: #1A2226;
+    border: none;
+    border-bottom: 2px solid #0DB8DE;
+    border-top: 0px;
+    border-radius: 0px;
+    font-weight: bold;
+    outline: 0;
+    padding-left: 0px;
+    margin-bottom: 20px;
+    color: #ECF0F5;
 }
 
-.login-form .login-credentials input {
-  display: block;
-  width: 100%;
-  margin: 1.2rem auto;
-  border: none;
-  border-bottom: 1px solid #fff;
-  background: transparent;
-  outline: none;
-  height: 40px;
-  font-size: 1rem;
-  background-color: rgba(255, 255, 255, 1);
-  padding: 6px;
+.form-group {
+    margin-bottom: 40px;
+    outline: 0px;
 }
 
-.login-form .login-credentials input::placeholder {
-  padding: 1px;
+.form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 2px solid #0DB8DE;
+    outline: 0;
+    background-color: #1A2226;
+    color: #ECF0F5;
 }
 
-.login-form .login-credentials button {
-  margin: 1.8rem auto;
-  outline: none;
-  display: block;
-  width: 100%;
-  height: 40px;
-  border: 1px solid #fff;
-  background-color: transparent;
-  color: #fff;
-  cursor: pointer;
-  font-size: 0.95rem;
-  transition: all 0.2s ease;
+input:focus {
+    outline: none;
+    box-shadow: 0 0 0;
 }
 
-.login-form .login-credentials button:hover {
-  background-color: rgba(255, 255, 255, 1);
-  color: var(--primary-color);
+label {
+    margin-bottom: 0px;
 }
 
-.login-form .login-credentials p {
-  text-align: center;
+.form-control-label {
+    font-size: 10px;
+    color: #6C6C6C;
+    font-weight: bold;
+    letter-spacing: 1px;
 }
 
-.login-form .login-credentials p a {
-  text-decoration: none;
-  color: #000;
-  cursor: pointer;
-  font-weight: bold;
+.btn-outline-primary {
+    border-color: #0DB8DE;
+    color: #0DB8DE;
+    border-radius: 0px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
 }
 
-.login-form hr {
-  border-color: rgba(0, 0, 0, 0.2);
-  margin: 0px;
+.btn-outline-primary:hover {
+    background-color: #0DB8DE;
+    right: 0px;
 }
 
-.register-container p {
-  text-align: center;
+.login-btm {
+    float: left;
 }
 
-.register-container p a {
-  text-decoration: none;
-  color: #fff;
-  cursor: pointer;
-  color: #000;
-  font-weight: bold;
+.login-button {
+  margin-left: 42%;
+  margin-bottom: 25px;
 }
 
+.login-text {
+    text-align: left;
+    padding-left: 0px;
+    color: #A2A4A4;
+}
+
+.loginbttm {
+    padding: 0px;
+}
 </style>
