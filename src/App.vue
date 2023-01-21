@@ -7,13 +7,13 @@
 <!---------------------------------------------- NAVBAR LINKS ------------------------------------------------->
   <header class="menu">
     
-  <ul>
-    <li><a href="/">Početna</a></li>
-    <li><a href="/about">O nama</a></li>
-    <li><a href="/pricelist">Cjenik</a></li>
-    <li><a href="/gallery">Galerija</a></li>
-    <li><a href="/events">Događaji</a></li>
-    <li><a href="/login">Prijava</a></li>
+  <ul class="a-menu">
+    <li class="appmenu"><a href="/">Početna</a></li>
+    <li class="appmenu"><a href="/about">O nama</a></li>
+    <li class="appmenu"><a href="/pricelist">Cjenik</a></li>
+    <li class="appmenu"><a href="/gallery">Galerija</a></li>
+    <li class="appmenu"><a href="/events">Događaji</a></li>
+    <li class="appmenu"><a href="/login">Prijava</a></li>
   </ul>
   </header>
    
@@ -71,23 +71,23 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-family: times;
+	font-family: 'Ink';
 	background-color: white;
   height: fit-content;
 }
 
-ul {
+.a-menu {
 	padding: 0;
 	margin: 0;
 	display: flex;
 	flex-wrap: wrap;
 }
 
-ul li {
+.a-menu .appmenu {
 	list-style: none;
 }
 
-ul li a {
+.a-menu .appmenu a {
 	text-decoration: none;
 	color: black;
 	font-size: 30px;
@@ -97,7 +97,7 @@ ul li a {
 	position: relative;
 }
 
-ul li a:before {
+.a-menu .appmenu a:before {
 	content: '';
 	position: absolute;
 	top: 0;
@@ -110,11 +110,11 @@ ul li a:before {
 	transform-origin: left
 }
 
- ul li a:hover:before, ul li a:hover:after {
+.a-menu .appmenu a:hover:before, .a-menu .appmenu a:hover:after {
  	transform: scaleX(1);
  }
 
- ul li a:after {
+.a-menu .appmenu a:after {
 	content: '';
 	position: absolute;
 	bottom: 0;
