@@ -1,70 +1,83 @@
 <template>
-  <div class="login-form" :class="{ 'show-form': showForm }">
-    <h2>Login Form</h2>
-    <form>
-      <label>Username</label>
-      <input type="text" placeholder="Enter username">
-      <label>Password</label>
-      <input type="password" placeholder="Enter password">
+  <div class="login-container">
+    <h1>Login</h1>
+    <form @submit.prevent="handleSubmit">
+      <div class="form-group">
+        <label for="username">Username:</label>
+        <input type="text" id="username" v-model="username" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" v-model="password" required />
+      </div>
       <button type="submit">Login</button>
-      <p class="error-message">{{ errorMessage }}</p>
     </form>
   </div>
 </template>
 
+<script>
+import firebase from 'firebase/app';
+import 'firebase/auth';
+
+export default {
+  data() {
+    return {
+      username: '',
+      password: ''
+    }
+  },
+  methods: {
+    handleSubmit() {
+      firebase.auth().signInWithEmailAndPassword(this.username, this.password)
+        .then(() => {
+          // Successful login, do something here
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+  }
+}
+</script>
+
 <style>
-.login-form {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 300px;
-  padding: 30px;
+.login-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+label {
+  display: block;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+input {
+  padding: 0.5rem;
+  font-size: 1.2rem;
   border-radius: 5px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s, opacity 0.3s;
+  border: 2px solid #ccc;
 }
 
-.show-form {
-  transform: translate(-50%, -50%) scale(1.1);
-  opacity: 1;
-  visibility: visible;
-}
-
-.login-form h2 {
-  margin-top: 0;
-  margin-bottom: 20px;
-}
-
-.login-form label {
-  display: block;
-  margin-bottom: 10px;
-}
-
-.login-form input {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-  margin-bottom: 20px;
-  font-size: 16px;
-}
-
-.login-form button {
-  display: block;
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 3px;
+button {
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
   background-color: #4CAF50;
- 
-  font-size: 16px;
+  color: #fff;
+  border: none;
   cursor: pointer;
 }
-
 </style>
-
-
-
-
-
