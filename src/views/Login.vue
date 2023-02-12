@@ -1,13 +1,23 @@
 <template>
+<!------------------------------ TITLE ----------------------------------------->
+  <div>
+    <img class="imgtitle" src="images/title/prijava.png" alt="Image Description">
+  </div>
+
+<!------------------------------ NOTE ----------------------------------------->
+  <div class="important-note">
+    <p class="note-text">{{ note }}</p>
+  </div>
+
+ <!------------------------------ FORM -----------------------------------------> 
   <div class="login">
-    <h2 class="title">Prijava</h2>
     <form @submit.prevent="handleLogin">
       <div class="form-group">
-        <label for="email">E-mail</label>
+        <label for="email">E-mail:</label>
         <input type="email" v-model="email" required />
       </div>
       <div class="form-group">
-        <label for="password">Lozinka</label>
+        <label for="password">Lozinka:</label>
         <input type="password" v-model="password" required/>
       </div>
       <button type="button" @click="handleLogin">Prijavi se</button>
@@ -16,6 +26,32 @@
 </template>
 
 <style>
+/* title */
+.imgtitle {
+  display: block;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 30px;
+  background-color: #333333;
+  border-radius: 15px;
+  height: 150px;
+}
+
+/* note */
+.important-note {
+  background-color: #ffeaa7;
+  border: 1px solid #fdcb6e;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.note-text {
+  font-weight: bolder;
+  font-size: 25px;
+  text-align: center;
+}
+
+/* form */
 .login {
   display: flex;
   flex-direction: column;
@@ -24,6 +60,7 @@
   border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
   max-width: 800px;
+  padding-top: 60px;
   padding-bottom: 80px;
   margin: 40px auto;
   margin-bottom: 4.3%;
@@ -104,8 +141,9 @@ export default {
   name: "Login",
   data() {
     return {
-        email: "",
-        password: "",    
+      note: "Ova prijava služi isključivo za potrebe vlasnika objekta. Ako nisi vlasnik, molimo NE pokušavati prijavljivati se! ",
+      email: "",
+      password: "",    
     };
   },
   methods: {

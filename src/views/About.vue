@@ -1,4 +1,8 @@
 <template>
+<!------------------------------ TITLE ----------------------------------------->
+  <div>
+    <img class="imgtitle" src="images/title/onama.png" alt="Image Description">
+  </div>
   <div id="parent1">
   <!------------------------------ LOCATION MAP ----------------------------------------->
     <div id="first1">
@@ -204,6 +208,14 @@
 
 
 <style>
+.imgtitle {
+  display: block;
+  margin: auto;
+  padding: 30px;
+  background-color: #333333;
+  border-radius: 15px;
+}
+
 #parent1 {
   display: flex;
 }

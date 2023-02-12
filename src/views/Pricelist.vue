@@ -1,4 +1,10 @@
 <template>
+<!------------------------------ TITLE ----------------------------------------->
+  <div>
+    <img class="imgtitle" src="images/title/cjenik.png" alt="Image Description">
+  </div>
+
+  <!------------------------------ CJENIK ----------------------------------------->
   <div>
     <input class="variation" id="solid" type="radio" value="1" name="border" checked="checked"/>
     <input class="variation" id="shadow" type="radio" value="2" name="border"/>
@@ -36,6 +42,15 @@
 </template>
 
 <style>
+/* title */
+.imgtitle {
+  display: block;
+  margin: auto;
+  padding: 30px;
+  background-color: #333333;
+  border-radius: 15px;
+}
+
 /* tekst unutar okvira*/
 .pp {
   margin-bottom: 1rem;
@@ -436,7 +451,7 @@ export default {
           { id: 'p6', name: 'Studena ledeni čaj brusnica', size: '0.25l', price: '1,59€' },
           { id: 'p7', name: 'Romerquelle limunska trava', size: '0.25l', price: '1,59€' },
           { id: 'p8', name: 'Jana vitamin', size: '0.5l', price: '1,99€' },
-          { id: 'p9', name: ' Hell', size: '0.25l', price: '1,59€' },
+          { id: 'p9', name: 'Hell', size: '0.25l', price: '1,59€' },
           { id: 'p10', name: 'Fanta', size: '0.25l', price: '1,59€' },
           { id: 'p11', name: 'Coca Cola', size: '0.25l', price: '1,59€' },
           { id: 'p12', name: 'Prirodan sok', size: '0.2l', price: '1,73€' },

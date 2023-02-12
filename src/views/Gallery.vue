@@ -1,4 +1,10 @@
 <template>
+<!------------------------------ TITLE ----------------------------------------->
+  <div>
+    <img class="imgtitle" src="images/title/galerija.png" alt="Image Description">
+  </div>
+
+  <!------------------------------ prvi ----------------------------------------->
   <div class="rotate">
     	<div id="carousel">
 			<figure><img class="image" src="images/first/1.jpeg" alt=""></figure>
@@ -13,6 +19,7 @@
 		</div>
 	</div>
 
+<!------------------------------ drugi ----------------------------------------->
 	  <div class="rotate2">
     	<div id="carouse2">
 			<figure><img class="image" src="images/second/1.jpeg" alt=""></figure>
@@ -30,6 +37,16 @@
 
 
 <style>
+/* title */
+.imgtitle {
+  display: block;
+  margin: auto;
+  padding: 30px;
+  background-color: #333333;
+  border-radius: 15px;
+  height: 150px;
+}
+
 @import url(https://fonts.googleapis.com/css?family=Anaheim);
 
 

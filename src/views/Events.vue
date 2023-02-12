@@ -1,5 +1,10 @@
 <template>
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
+<!------------------------------ TITLE ----------------------------------------->
+  <div>
+    <img class="imgtitle" src="images/title/dogadaji.png" alt="Image Description">
+  </div>
+
 
 <ul class="timeline">
 
@@ -130,7 +135,14 @@
 </template>
 
 <style>
-
+/* title */
+.imgtitle {
+  display: block;
+  margin: auto;
+  padding: 30px;
+  background-color: #333333;
+  border-radius: 15px;
+}
 
 /* ================ The Timeline ================ */
 
