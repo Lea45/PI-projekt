@@ -1,56 +1,155 @@
 <template>
   <nav class="navbar">
-    <div class="navbar-brand">
-      <router-link to="/" class="navbar-item">Caffe bar Palmero</router-link>  
-        <span></span>
-        <span></span>
-        <span></span>
+    <div class="logo">
+      <p class="logo-ttx"> PALMERO </p>
     </div>
+    <ul class="nav-links">
+      <li><router-link to="/">POČETNA</router-link></li>
+      <li><router-link to="/about">O NAMA</router-link></li>
+      <li><router-link to="/pricelist">CJENIK</router-link></li>
+      <li><router-link to="/gallery">GALERIJA</router-link></li>
+      <li><router-link to="/events">DOGAĐAJI</router-link></li>
+      <li v-if="!isUserLoggedIn"><router-link to="/login">PRIJAVA</router-link></li>
+      <li v-if="isUserLoggedIn">
+      <button class="logout" @click="logout">ODJAVA</button>  
+      </li>
+    </ul>
     
-      <div class="navbar-end">
-        <router-link to="/" class="navbar-item">Početna</router-link>
-        <router-link to="/about" class="navbar-item">O nama</router-link>
-        <router-link to="/pricelist" class="navbar-item">Cjenik</router-link>
-        <router-link to="/gallery" class="navbar-item">Galerija</router-link>
-        <router-link to="/login" class="navbar-item">Prijava</router-link>
-      </div>
-    
+        <ul v-if="navOpen">
+          <li @click="toggleNav"><router-link to="/">POČETNA</router-link></li>
+          <li @click="toggleNav"><router-link to="/abput">O NAMA</router-link></li>
+          <li @click="toggleNav"><router-link to="/pricelist">CJENIK</router-link></li>
+          <li @click="toggleNav"><router-link to="/gallery">GALERIJA</router-link></li>
+          <li @click="toggleNav"><router-link to="/events">DOGAĐAJI</router-link></li>
+          <li v-if="!isUserLoggedIn" @click="toggleNav"><router-link to="/login">PRIJAVA</router-link></li>
+          <li v-if="isUserLoggedIn">
+            <button class="logout" @click="logout">ODJAVA</button>  
+          </li>
+        </ul>
   </nav>
-      <div id="content-wrap">
-      <router-view />
-    </div>
-
+  <router-view/>
 </template>
 
-
-
 <style>
-.navbar { /* cijeli navbar */
+.logo-ttx {
+  font-size: 80px;
+  font-family: cursive;
+  font-weight: bolder;
+  color: rgb(227, 203, 171);
+  padding-left: 220px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
   background-color: white;
-  padding: 20px;
 }
 
-.navbar-brand .navbar-item { /* navbar text - caffe bar palmero */
-  font-weight: bold;
-  font-size: 50px;
-  color: black;
+.navbar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
 }
 
-
-.navbar-end .navbar-item { /* navbar text - pocetna, o nama, cjenik, galerija, prijava*/
-  padding: 20px;
+.logout {
+  font-family: 'Open Sans', sans-serif;
+  background-color: green;
   color: black;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
   font-size: 30px;
   font-weight: bolder;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
-@media screen and (max-width: 1023px) { /* sužavanje stranice */ 
-  .navbar-end {
-    background-color: white;
-    padding: 30px;
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+}
+
+.nav-links li {
+  margin: 0 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  color: #000000;
+}
+
+.social-media a {
+  padding-right: 20px;
+  
+  color: #000000;
+  font-size: 30px;
+}
+
+@media (max-width: 600px) {
+  .nav-links {
+    display: none;
+  }
+
+  nav ul {
+    flex-direction: column;
+    position: absolute;
+    top: 45px;
+    left:50%;
+    background-color:#FFB6C1;
+    width: 25%;
+    
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    transform: translateX(50%);
+    transition: all 0.3s ease-in-out;
+  }
+
+  nav ul a {
+    text-decoration: none;
+    color:#000000;
+    font-weight: bold;
+    
   }
 }
 </style>
 
+<script>
+import firebase from '@/firebase';
+export default {
+  data() {
+    return {
+      isUserLoggedIn: false,
+      navOpen: false
+    };
+  },
 
+  mounted() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.isUserLoggedIn = true;
+      } else {
+        this.isUserLoggedIn = false;
+      }
+    });
+  },
 
+  methods: {
+    logout() {
+      firebase.auth().signOut();
+    },
+    toggleNav() {
+      this.navOpen = !this.navOpen;
+    }
+  }
+};
+</script>

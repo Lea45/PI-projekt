@@ -1,83 +1,121 @@
 <template>
-  <div class="login-container">
-    <h1>Login</h1>
-    <form @submit.prevent="handleSubmit">
+  <div class="container5">
+    <h2 class="title">Prijava</h2>
+    <form @submit.prevent="handleLogin">
       <div class="form-group">
-        <label for="username">Username:</label>
-        <input type="text" id="username" v-model="username" required />
+        <label for="email">E-mail</label>
+        <input type="email" v-model="email" required />
       </div>
       <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" v-model="password" required />
+        <label for="password">Lozinka</label>
+        <input type="password" v-model="password" required/>
       </div>
-      <button type="submit">Login</button>
+      <button type="button" @click="handleLogin">Prijavi se</button>
     </form>
   </div>
 </template>
 
-<script>
-import firebase from 'firebase/app';
-import 'firebase/auth';
-
-export default {
-  data() {
-    return {
-      username: '',
-      password: ''
-    }
-  },
-  methods: {
-    handleSubmit() {
-      firebase.auth().signInWithEmailAndPassword(this.username, this.password)
-        .then(() => {
-          // Successful login, do something here
-        })
-        .catch(error => {
-          console.log(error);
-        });
-    }
-  }
-}
-</script>
-
 <style>
-.login-container {
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+.container5 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100%;
+  background-color: #f5f5f5;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  padding-bottom: 80px;
+  margin: 40px auto;
+  margin-bottom: 4.3%;
+  margin-top: 4.3%;
 }
-
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.title {
+  margin-bottom: 45px;
+  font-size: 38px;
+  font-weight: bold;
+  color: #000000;
+  font-family: 'Open Sans', sans-serif;
 }
-
 .form-group {
-  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
 }
-
 label {
-  display: block;
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 23px;
+  font-weight: bold;
+  margin-bottom: 15px;
 }
-
 input {
-  padding: 0.5rem;
-  font-size: 1.2rem;
+  font-family: 'Open Sans', sans-serif;
+  padding: 15px;
+  font-size: 16px;
   border-radius: 5px;
-  border: 2px solid #ccc;
+  border: 1px solid #ddd;
 }
-
-button {
-  padding: 0.5rem 1rem;
-  font-size: 1.2rem;
+button[type="button"] {
+  font-family: 'Open Sans', sans-serif;
+  background-color: #FFB6C1;
+  color: white;
+  padding: 15px 23px;
+  font-size: 20px;
   border-radius: 5px;
-  background-color: #4CAF50;
-  color: #fff;
   border: none;
   cursor: pointer;
+  margin-top: 30px;
+}
+button[type="button"]:hover {
+  background-color: #ff99a8;
+}
+
+@media (max-width: 600px) {
+  .container5 {
+    max-width: 90%;
+    padding: 30px;
+  }
+  .title {
+    font-size: 26px;
+  }
+  label {
+    font-size: 16px;
+  }
+  input {
+    font-size: 14px;
+  }
+  button[type="button"] {
+    font-size: 18px;
+    padding: 10px 15px;
+  }
 }
 </style>
+
+<script>
+import firebase from '@/firebase';
+import 'firebase/auth'
+
+export default {
+  name: "Login",
+  data() {
+    return {
+        email: "",
+        password: "",    
+    };
+  },
+  methods: {
+    async handleLogin() {
+      let that=this;
+      try {
+        const response = await firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+        console.log("Uspješna prijava",response);
+        window.alert("Uspješna prijava");
+        that.$router.replace({ name: 'home'});
+      } catch (error) {
+        console.error("Došlo je do greške", error)
+        alert("Unijeli ste pogrešnu E-mail adresu ili lozinku, molimo pokušajte ponovno");
+      }
+    }
+  }
+};
+</script>
