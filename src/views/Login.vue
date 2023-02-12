@@ -1,5 +1,5 @@
 <template>
-  <div class="container5">
+  <div class="login">
     <h2 class="title">Prijava</h2>
     <form @submit.prevent="handleLogin">
       <div class="form-group">
@@ -16,8 +16,7 @@
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
-.container5 {
+.login {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,48 +29,54 @@
   margin-bottom: 4.3%;
   margin-top: 4.3%;
 }
+
 .title {
   margin-bottom: 45px;
-  font-size: 38px;
-  font-weight: bold;
+  margin-top: 30px;
+  font-size: 40px;
+  font-weight: bolder;
   color: #000000;
   font-family: 'Open Sans', sans-serif;
 }
+
 .form-group {
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
+
 label {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 23px;
+  font-size: 25px;
   font-weight: bold;
   margin-bottom: 15px;
 }
+
 input {
-  font-family: 'Open Sans', sans-serif;
   padding: 15px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid #ddd;
-}
-button[type="button"] {
-  font-family: 'Open Sans', sans-serif;
-  background-color: #FFB6C1;
-  color: white;
-  padding: 15px 23px;
   font-size: 20px;
-  border-radius: 5px;
+  border-radius: 15px;
+  border: 1px solid #682727;
+}
+
+button[type="button"] {
+  background-color: rgb(100, 139, 41);
+  color: white;
+  padding: 20px 40px;
+  font-size: 20px;
+  font-weight: bolder;
+  border-radius: 15px;
   border: none;
   cursor: pointer;
   margin-top: 30px;
+  margin-left: 18%;
 }
+
 button[type="button"]:hover {
-  background-color: #ff99a8;
+  background-color: green;
 }
 
 @media (max-width: 600px) {
-  .container5 {
+  .login {
     max-width: 90%;
     padding: 30px;
   }
@@ -108,12 +113,12 @@ export default {
       let that=this;
       try {
         const response = await firebase.auth().signInWithEmailAndPassword(this.email, this.password)
-        console.log("Uspješna prijava",response);
-        window.alert("Uspješna prijava");
+        console.log("Uspješna prijava :)",response);
+        window.alert("Uspješna prijava :)");
         that.$router.replace({ name: 'home'});
       } catch (error) {
-        console.error("Došlo je do greške", error)
-        alert("Unijeli ste pogrešnu E-mail adresu ili lozinku, molimo pokušajte ponovno");
+        console.error("ERROR", error)
+        alert("Unijeli ste pogrešnu E-mail adresu ili lozinku, molimo pokušajte ponovno!");
       }
     }
   }
