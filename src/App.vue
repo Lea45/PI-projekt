@@ -104,7 +104,6 @@
     position: absolute;
     top: 45px;
     left:50%;
-    background-color:#FFB6C1;
     width: 25%;
     
     padding: 5px;
