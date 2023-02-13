@@ -34,6 +34,10 @@
               <span>{{ item.name }}, {{ item.size }}</span>
               <span>{{ item.price }}</span>
             </p>
+            <!-- GUMB -  prijava, dodaj sadržaj -->
+            <div class="button-novo" v-if="isUserLoggedIn === true">
+              <button class="novo"> DODAJ </button>
+            </div>
           </div>
         </div>
       </div>
@@ -49,6 +53,7 @@
   padding: 30px;
   background-color: #333333;
   border-radius: 15px;
+  height: 150px;
 }
 
 /* tekst unutar okvira*/
@@ -233,6 +238,28 @@
   white-space: nowrap;
 }
 
+/* gumb - prijava, dodaj */
+.novo {
+  height: 50px;
+  width: 150px;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(117, 174, 117);
+  font-weight: bolder;
+  cursor: pointer;
+  border-radius: 20px;
+  color: white;
+}
+
+.button-novo {
+  text-align: center;
+  padding: 25px;
+}
+
+.novo:hover {
+  background-color: green;
+}
+
 @media (min-width: 50rem) {
   .tabs {
     margin: 0 2rem;
@@ -364,10 +391,12 @@ input.variation:nth-of-type(1) + label {
 
 
 <script>
+import firebase from '@/firebase';
 export default {
 
   data() {
  return {
+    isUserLoggedIn: false,
     activeTab: 'tab-1',
     tabs: [
       {
@@ -468,6 +497,18 @@ export default {
          
     
   },
+  
+  mounted() {
+    firebase.auth().onAuthStateChanged((user) => {
+      if (user) {
+        this.isUserLoggedIn = true;
+      } else {
+        this.isUserLoggedIn = false;
+      }
+      console.log(this.isUserLoggedIn)
+    });
+  },
+
 methods: {
 openTab: function(evt, tabName) {
 var i, tabcontent, tablinks;

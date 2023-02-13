@@ -47,8 +47,6 @@
   height: 150px;
 }
 
-@import url(https://fonts.googleapis.com/css?family=Anaheim);
-
 
 .rotate {
 	margin: 4% auto;
@@ -66,6 +64,7 @@
 	position: relative;
 	perspective: 1000px;
 	padding-top: 80px;
+	
 }
 
 #carousel, #carouse2  {
