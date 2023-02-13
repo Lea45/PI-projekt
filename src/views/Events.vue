@@ -1,138 +1,121 @@
 <template>
-    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic' rel='stylesheet' type='text/css'>
-<!------------------------------ TITLE ----------------------------------------->
   <div>
-    <img class="imgtitle" src="images/title/dogadaji.png" alt="Image Description">
+    <div>
+      <img class="imgtitle" src="images/title/dogadaji.png" alt="Image Description" />
+    </div>
+    <ul class="timeline">
+      <li v-for="(event, index) in filteredEvents" :key="index" :class="{'fade-enter-active': fadeIn}">
+        <div :class="directionClass(index)">
+          <div class="flag-wrapper">
+            <span class="flag">{{ event.title }}</span>
+            <span class="time-wrapper"><span class="time">{{ event.date }}</span></span>
+          </div>
+          <div class="desc" v-html="event.description"></div>
+        </div>
+      </li>
+    </ul>
   </div>
-
-
-<ul class="timeline">
-
-	<li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag">TOMO KARAOKE</span>
-				<span class="time-wrapper"><span class="time">15.07.2022</span></span>
-			</div>
-			<div class="desc">*Brojimo sitno do otvorenja!*</div>
-		</div>
-	</li>
-  
-	<li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag">VINO PARTY</span>
-				<span class="time-wrapper"><span class="time">05.08.2022</span></span>
-			</div>
-			<div class="desc">*uz stare narodne hitove*</div>
-		</div>
-	</li>
-
-	<li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag">ŽESTA PARTY</span>
-				<span class="time-wrapper"><span class="time">20.08.2022</span></span>
-			</div>
-			<div class="desc">*sva žesta 10kn*</div>
-		</div>
-	</li>
-
-    <li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag">VINO PARTY</span>
-				<span class="time-wrapper"><span class="time">16.09.2022</span></span>
-			</div>
-			<div class="desc">*sve sa vinom 8kn*</div>
-		</div>
-	</li>
-  
-  	<li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag">GIN-TONIC PARTY</span>
-				<span class="time-wrapper"><span class="time">23.09.2022</span></span>
-			</div>
-			<div class="desc">*gin-tonic 10kn *</div>
-		</div>
-	</li>
-
-    <li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag">UTAKMICA</span>
-				<span class="time-wrapper"><span class="time">25.09.2022</span></span>
-			</div>
-			<div class="desc">*besplatan grah za sve goste*</div>
-		</div>
-	</li>
-
-    <li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag">PIDŽAMA PARTY</span>
-				<span class="time-wrapper"><span class="time">07.10.2022</span></span>
-			</div>
-			<div class="desc">*biranje najluđe pidžame*</div>
-		</div>
-	</li>
-
-    <li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag">HEINEKEN PARTY</span>
-				<span class="time-wrapper"><span class="time">21.10.2022</span></span>
-			</div>
-			<div class="desc">*heineken 11kn*</div>
-		</div>
-	</li>
-
-    <li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag">HALLOWEEN PARTY</span>
-				<span class="time-wrapper"><span class="time">28.10.2022</span></span>
-			</div>
-			<div class="desc">*biranje najstrašnije maske*</div>
-		</div>
-	</li>
-
-    <li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag">HELL PARTY</span>
-				<span class="time-wrapper"><span class="time">11.11.2022</span></span>
-			</div>
-			<div class="desc">*hell 5kn*</div>
-            <div class="desc">*vodka + hell 10kn*</div>
-            <div class="desc">*codka + juice 10kn*</div>
-		</div>
-	</li>
-
-    <li>
-		<div class="direction-r">
-			<div class="flag-wrapper">
-				<span class="flag">JOSIP I DINO</span>
-				<span class="time-wrapper"><span class="time">25.11.2022</span></span>
-			</div>
-			<div class="desc">*harmonika i klavijature*</div>
-		</div>
-	</li>
-
-    <li>
-		<div class="direction-l">
-			<div class="flag-wrapper">
-				<span class="flag">UTAKMICA</span>
-				<span class="time-wrapper"><span class="time">27.11.2022</span></span>
-			</div>
-			<div class="desc">*grickalice*</div>
-            <div class="desc">*karlovačko 0,33 11kn*</div>
-		</div>
-	</li>
-    
-</ul>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      events: [
+        {
+          title: "TOMO KARAOKE",
+          date: "15.07.2022",
+          description: "<p>*Brojimo sitno do otvorenja!*</p>"
+        },
+        
+		{
+          title: "VINO PARTY",
+          date: "05.08.2022",
+          description: "<p>*uz stare narodne hitove*</p>"
+        },
+
+		{
+          title: "ŽESTA PARTY",
+          date: "20.08.2022",
+          description: "<p>*sva žesta 10kn*</p>"
+        },
+
+		{
+          title: "VINO PARTY",
+          date: "16.09.2022",
+          description: "<p>*sve sa vinom 8kn*</p>"
+        },
+
+		{
+          title: "GIN-TONIC PARTY",
+          date: "23.09.2022",
+          description: "<p>*gin-tonic 10kn*</p>"
+        },
+
+		{
+          title: "UTAKMICA",
+          date: "25.09.2022",
+          description: "<p>*besplatan grah za sve goste*</p>"
+        },
+
+		{
+          title: "PIDŽAMA PARTY",
+          date: "07.10.2022",
+          description: "<p>*Najluđa pidžama osvaja nagradu*</p>"
+        },
+
+		{
+          title: "HEINEKEN PARTY",
+          date: "21.10.2022",
+          description: "<p>*heineken 10kn*</p>"
+        },
+
+		{
+          title: "HALLOWEEN PARTY",
+          date: "28.10.2022",
+          description: "<p>*iramo najstrašniju masku*</p>"
+        },
+
+		{
+          title: "HELL PARTY",
+          date: "11.¸11.2022",
+          description: "<p>*hell vodka 10kn*</p>"
+        },
+
+		{
+          title: "JOSIP I DINO",
+          date: "25.11.2022",
+          description: "<p>*harmonika i klavijature*</p>"
+        },
+
+		{
+          title: "UTAKMICA",
+          date: "27.11.2022",
+          description: "<p>*free grickalice*</p>"
+        },
+
+
+      ],
+      fadeIn: false
+    };
+  },
+  computed: {
+    filteredEvents() {
+      return this.events.sort((a, b) => {
+        return new Date(a.date) - new Date(b.date);
+      });
+    }
+  },
+  methods: {
+    directionClass(index) {
+      return index % 2 === 0 ? "direction-r" : "direction-l";
+    }
+  },
+  mounted() {
+    this.fadeIn = true;
+  }
+};
+</script>
 
 <style>
 /* title */
@@ -142,6 +125,7 @@
   padding: 30px;
   background-color: #333333;
   border-radius: 15px;
+  height: 150px;
 }
 
 /* ================ The Timeline ================ */
