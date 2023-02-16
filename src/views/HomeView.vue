@@ -132,6 +132,32 @@
   font-size: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  #parent {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  #first {
+    order: 2;
+  }
+
+  #second {
+    order: 1;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+  .main {
+    padding: 50px 30px 0;
+  }
+
+  .cup {
+    margin: 10px auto -20px;
+  }
+}
+
 /*--------------------------------- ANIMATED MUG ---------------------------------- */
 @import url("https://fonts.googleapis.com/css?family=Ubuntu:400,400i,700,700i");
 *, *:before, *:after {

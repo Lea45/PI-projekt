@@ -229,6 +229,28 @@
   flex: 1;
 }
 
+@media screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+  #parent1 {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+
+  #first1 {
+    order: 2;
+  }
+
+  #second1  {
+    order: 1;
+    width: 100%;
+    margin-top: 50px;
+  }
+
+
+
+
+}
+
 /*--------------------------------- LOCATION MAP ---------------------------------- */
 #all {
     width: 100%;
@@ -690,7 +712,6 @@ input:focus {
 .blackboard .text1, .blackboard .text2 {
 	position: absolute;
 }
-
 .blackboard .text1 {
   top: 21px;
   left: 24px;
@@ -698,7 +719,6 @@ input:focus {
   color: rgba(120,120,120,0.8);
   text-shadow: -1px 0 0px white; 
 }
-
 .blackboard .text2 {
   top: 21px;
   left: 21px;
@@ -706,12 +726,10 @@ input:focus {
   color: rgba(80,80,80,0.5);
   text-shadow: 1px 0 0 rgba(255,255,255,0.7) ;
 }
-
 .blackboard ul li {
 	list-style-type: none;
 	padding-left: 3rem;
 }
-
 .blackboard ul li::before {
 	content: '->  ';
 	margin-left: -2.3rem;
