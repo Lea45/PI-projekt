@@ -1,18 +1,20 @@
 <template>
-  <div>
-    <h2>Price List</h2>
+  <div class="cjenik">
+    <div>
+      <img class="imgtitle" src="images/title/cjenik.png" alt="Image Description" />
+    </div>
     <ul>
       <li v-for="(price, index) in prices" :key="index">
         {{ price.name }}:  €{{ price.price }}
       </li>
     </ul>
 
-    <div v-if="isUserLoggedIn === true">
-      <label for="name">Name:</label>
+    <div class="labell" v-if="isUserLoggedIn === true">
+      <label for="name">Naziv pića:</label>
       <input id="name" v-model="newItem.name" />
     </div>
-    <div v-if="isUserLoggedIn === true">
-      <label for="price">Price:</label>
+    <div class="labell" v-if="isUserLoggedIn === true">
+      <label for="price">Cijena:</label>
       <input id="price" v-model.number="newItem.price" />
     </div>
 
@@ -23,21 +25,31 @@
 </template>
 
 <style>
-h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
+/* title */
+.imgtitle {
+  display: block;
+  margin: auto;
+  padding: 30px;
+  background-color: #333333;
+  border-radius: 15px;
+  height: 150px;
 }
+
 
 ul {
   list-style-type: none;
-  padding: 0;
-  margin-bottom: 2rem;
+  margin: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+
 }
 
 li {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
+  font-size: 30px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 label {
@@ -63,9 +75,14 @@ input {
   color: #fff;
   border: none;
   padding: 1rem 2rem;
-  border-radius: 0.25rem;
+  border-radius: 10px;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+.labell {
+  text-align: center;
+  font-weight: bolder;
 }
 
 </style>
@@ -127,7 +144,7 @@ return {
   ],
   newItem: {
     name: "",
-    price: 0,
+    price: "",
   },
   isUserLoggedIn: false,
 };
@@ -145,7 +162,7 @@ return {
   methods: {
     addItem() {
       this.prices.push(this.newItem);
-      this.newItem = { name: "", price: 0 };
+      this.newItem = { name: "", price: "" };
     },
   },
 };
