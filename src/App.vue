@@ -16,12 +16,6 @@
     </ul>
     
         <ul v-if="navOpen">
-          <li @click="toggleNav"><router-link to="/">POČETNA</router-link></li>
-          <li @click="toggleNav"><router-link to="/abput">O NAMA</router-link></li>
-          <li @click="toggleNav"><router-link to="/pricelist">CJENIK</router-link></li>
-          <li @click="toggleNav"><router-link to="/gallery">GALERIJA</router-link></li>
-          <li @click="toggleNav"><router-link to="/events">DOGAĐAJI</router-link></li>
-          <li v-if="!isUserLoggedIn" @click="toggleNav"><router-link to="/login">PRIJAVA</router-link></li>
           <li v-if="isUserLoggedIn">
             <button class="logout" @click="logout">ODJAVA</button>  
           </li>

@@ -214,6 +214,7 @@
   padding: 30px;
   background-color: #333333;
   border-radius: 15px;
+  height: 150px;
 }
 
 #parent1 {
